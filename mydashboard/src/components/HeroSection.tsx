@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
       {/* Grid */}
       <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
         <div>
@@ -44,35 +44,16 @@ const HeroSection = () => {
               Contact sales team
             </a>
           </div>
-
-          {/* Review */}
-          <div className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">
-            {/* Review Stars */}
-            <div className="py-5 flex gap-x-1">
-              {Array(5)
-                .fill(null)
-                .map((_, index) => (
-                  <svg
-                    key={index}
-                    className="size-4 text-gray-800"
-                    width="51"
-                    height="51"
-                    viewBox="0 0 51 51"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M27.0352 1.6307L33.9181 16.3633C34.2173 16.6768 34.5166 16.9903 34.8158 16.9903L50.0779 19.1845C50.9757 19.1845 51.275 20.4383 50.6764 21.0652L39.604 32.3498C39.3047 32.6632 39.3047 32.9767 39.3047 33.2901L41.998 49.2766C42.2973 50.217 41.1002 50.8439 40.5017 50.5304L26.4367 43.3208C26.1375 43.3208 25.8382 43.3208 25.539 43.3208L11.7732 50.8439C10.8754 51.1573 9.97763 50.5304 10.2769 49.59L12.9702 33.6036C12.9702 33.2901 12.9702 32.9767 12.671 32.6632L1.29923 21.0652C0.700724 20.4383 0.999979 19.4979 1.89775 19.4979L17.1598 17.3037C17.459 17.3037 17.7583 16.9903 18.0575 16.6768L24.9404 1.6307C25.539 0.69032 26.736 0.69032 27.0352 1.6307Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                ))}
-            </div>
-          </div>
         </div>
 
-        {/* Placeholder for Image */}
-        <div className=" md:block bg-gray-200 h-96 w-full rounded-lg"></div>
+        {/* Responsive Image Placeholder */}
+        <div className=" w-full h-96 md:h-full bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center">
+          <img
+            className="w-full h-full object-cover rounded-lg"
+            src="https://images.unsplash.com/photo-1648737963503-1a26da876aca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=900&q=80"
+            alt="Hero Section"
+          />
+        </div>
       </div>
     </div>
   );

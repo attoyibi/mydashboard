@@ -1,15 +1,15 @@
+import { Link } from "react-router-dom";
 export const Collapse = ({ isOpen }) => {
   return (
     <div
       id="hs-header-classic"
-      className={`hs-collapse ${
-        isOpen ? "block" : "hidden"
-      } overflow-hidden transition-all duration-300 basis-full grow md:block`}
+      className={`hs-collapse ${isOpen ? "block" : "hidden"
+        } overflow-hidden transition-all duration-300 basis-full grow md:block`}
       aria-labelledby="hs-header-classic-collapse"
     >
       <div className="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300">
         <div className="py-2 md:py-0 flex flex-col md:flex-row md:items-center md:justify-end gap-0.5 md:gap-1">
-          <a
+          {/* <a
             className="p-2 flex items-center text-sm text-blue-600 focus:outline-none focus:text-blue-600"
             href="#"
             aria-current="page"
@@ -101,6 +101,26 @@ export const Collapse = ({ isOpen }) => {
             </svg>
             Blog
           </a>
+          <div className="my-2 md:my-0 md:mx-2">
+            <div className="w-full h-px md:w-px md:h-4 bg-gray-100 md:bg-gray-300 dark:bg-neutral-700"></div>
+          </div> */}
+
+          {/* Button Group */}
+          <div className="flex flex-wrap items-center gap-x-1.5">
+            <Link
+              to="/login"
+              className="py-[7px] px-2.5 inline-flex items-center font-medium text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 focus:outline-none focus:bg-gray-100 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+            >
+              Sign in
+            </Link>
+            <Link
+              className="py-2 px-2.5 inline-flex items-center font-medium text-sm rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:bg-blue-600"
+              to="/register"
+            >
+              Get started
+            </Link>
+          </div>
+          {/* End Button Group */}
         </div>
       </div>
     </div>
