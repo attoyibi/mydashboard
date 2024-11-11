@@ -1,13 +1,8 @@
+// src/hooks/useLogin.ts
 import { useState } from 'react';
-import axios from 'axios';
-
-interface LoginResponse {
-    status: string;
-    code: number;
-    message: string;
-    data: any;
-    error: any;
-}
+import { loginUser } from '../services/apiService';
+import { LoginResponse } from '../types/authTypes';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 export const useLogin = () => {
     const [email, setEmail] = useState<string>('');
@@ -16,6 +11,7 @@ export const useLogin = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
     const [serverError, setServerError] = useState<string>('');
+    const navigate = useNavigate(); // Initialize useNavigate
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
@@ -36,38 +32,24 @@ export const useLogin = () => {
         setErrors({});
 
         try {
-            const response: LoginResponse = await axios.post(
-                'http://localhost:3000/api/v1/auth/login',
-                { email, password },
-                {
-                    headers: {
-                        'Content-Type': 'application/json', // Set content type to application/json
-                    },
-                }
-            );
-            console.log("respond = ", response);
+            const response: LoginResponse = await loginUser(email, password);
             if (response.status === 'fail') {
                 if (response.code === 400) {
-                    // Validation error
                     const errorField = response.error.field;
-                    setErrors((prev) => ({ ...prev, [errorField]: response.error.issue }));
-                } else if (response.code === 404) {
-                    // User not found
-                    setServerError(response.error.message);
-                } else if (response.code === 401) {
-                    // Invalid credentials
-                    setServerError(response.error.message);
+                    setErrors((prev) => ({ ...prev, [errorField || '']: response.error.issue || '' }));
+                } else {
+                    setServerError(response.error.message || 'An error occurred');
                 }
             } else if (response.status === 'success') {
-                // Handle success, e.g., save token, redirect user
                 const { token, userId, email } = response.data;
-                localStorage.setItem('token', token); // Save the token
-                localStorage.setItem('userId', userId.toString()); // Save userId if needed
-                localStorage.setItem('email', email); // Optionally save email
-                // Redirect or handle post-login tasks
+                if (token) localStorage.setItem('token', token);
+                if (userId) localStorage.setItem('userId', userId.toString());
+                if (email) localStorage.setItem('email', email);
+
+                navigate('/dashboard'); // Replace '/dashboard' with your target path
             }
         } catch (error) {
-            setServerError('An unexpected error occurred. Please try again later.' + error);
+            setServerError(`An unexpected error occurred: ${error}`);
         } finally {
             setLoading(false);
         }

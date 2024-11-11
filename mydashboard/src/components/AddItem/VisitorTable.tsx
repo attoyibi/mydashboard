@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function VisitorTable() {
+export default function VisitorTable({ onCreateClick }) {
   return (
-    <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div className="max-w-[85rem] py-10 lg:py-10 mx-auto">
       <div className="flex flex-col">
         <div className="-m-1.5 overflow-x-auto">
           <div className="p-1.5 min-w-full inline-block align-middle">
@@ -10,15 +10,22 @@ export default function VisitorTable() {
               {/* Header */}
               <div className="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-neutral-700">
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-800 dark:text-neutral-200">Visitors</h2>
-                  <p className="text-sm text-gray-600 dark:text-neutral-400">Visitors overview by country.</p>
+                  <h2 className="text-xl font-semibold text-gray-800 dark:text-neutral-200">
+                    Visitors
+                  </h2>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">
+                    Visitors overview by country.
+                  </p>
                 </div>
                 <div>
                   <div className="inline-flex gap-x-2">
-                    <button className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700">
+                    {/* <button className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700">
                       View all
-                    </button>
-                    <button className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700">
+                    </button> */}
+                    <button
+                      onClick={onCreateClick}
+                      className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+                    >
                       <svg className="shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M12 5v14" />
                       </svg>

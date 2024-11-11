@@ -1,54 +1,66 @@
-// useItemForm.tsx
-
+// src/hooks/useItemForm.js
 import { useState } from "react";
-import { ItemData, UseItemFormReturnType } from "../types/ItemTypes";
 
-export default function useItemForm(): UseItemFormReturnType {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const [itemData, setItemData] = useState<ItemData>({
+const useItemForm = () => {
+  const [itemData, setItemData] = useState({
     name: "",
     description: "",
     quantity: "",
     price: "",
   });
+  const [errors, setErrors] = useState({});
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Toggle modal visibility
+  // Fungsi untuk membuka dan menutup modal
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
 
-  // Handle input change
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  // Mengatur nilai form input
+  const handleChange = (e) => {
     setItemData({
       ...itemData,
       [e.target.name]: e.target.value,
     });
   };
 
-  // Submit item data
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Data barang:", itemData);
+  // Fungsi untuk validasi form
+  const validateForm = () => {
+    let formErrors = {};
+    if (!itemData.name) formErrors.name = "Nama barang tidak boleh kosong";
+    if (!itemData.description) formErrors.description = "Deskripsi tidak boleh kosong";
+    if (!itemData.quantity || itemData.quantity <= 0)
+      formErrors.quantity = "Kuantitas harus lebih besar dari 0";
+    if (!itemData.price || itemData.price <= 0)
+      formErrors.price = "Harga harus lebih besar dari 0";
 
-    // Clear form after submission
+    setErrors(formErrors);
+    return Object.keys(formErrors).length === 0;
+  };
+
+  // Fungsi untuk submit data item
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validateForm()) return; // Jangan lanjutkan jika form tidak valid
+    console.log("Data barang:", itemData);
+    // Clear form setelah submit
     setItemData({
       name: "",
       description: "",
       quantity: "",
       price: "",
     });
-
-    // Close the modal
     toggleModal();
   };
 
   return {
-    isModalOpen,
     itemData,
-    toggleModal,
+    errors,
+    isModalOpen,
     handleChange,
     handleSubmit,
+    toggleModal,
   };
-}
+};
+
+export default useItemForm;

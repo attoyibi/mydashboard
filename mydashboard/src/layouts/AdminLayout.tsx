@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Outlet, Link } from "react-router-dom";
+import { useLogout } from '../hooks/useLogout';
 
 const AdminLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef(null); // referensi untuk dropdown
+  const { logout } = useLogout();
 
   // Menghandle klik di luar dropdown untuk menutupnya
   useEffect(() => {
@@ -25,9 +27,8 @@ const AdminLayout = () => {
     <div className="flex h-screen bg-gray-100 relative">
       {/* Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 z-30 w-64 transition-transform transform bg-white border-r border-gray-200 lg:translate-x-0 lg:static lg:inset-0 ${
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed inset-y-0 left-0 z-30 w-64 transition-transform transform bg-white border-r border-gray-200 lg:translate-x-0 lg:static lg:inset-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <div className="flex items-center justify-center h-20 border-b border-gray-200">
           <h1 className="text-xl font-bold text-gray-700">Admin Panel</h1>
@@ -147,7 +148,7 @@ const AdminLayout = () => {
                   <span className="block px-4 py-2 text-gray-700 font-medium">
                     John Doe
                   </span>
-                  <button className="block w-full text-left px-4 py-2 text-sm text-red-500 hover:bg-gray-100">
+                  <button onClick={logout} className="block w-full text-left px-4 py-2 text-sm text-red-500 hover:bg-gray-100">
                     Logout
                   </button>
                 </div>
