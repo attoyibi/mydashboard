@@ -106,7 +106,7 @@ const AdminLayout = () => {
 
           {/* Navbar Content */}
           <div className="flex items-center space-x-4">
-            <button className="relative p-2 text-gray-500 focus:outline-none hover:text-gray-700">
+            {/* <button className="relative p-2 text-gray-500 focus:outline-none hover:text-gray-700">
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -124,7 +124,7 @@ const AdminLayout = () => {
               <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
                 3
               </span>
-            </button>
+            </button> */}
 
             <div className="relative flex items-center space-x-2">
               <img

@@ -25,7 +25,7 @@ export default function AddItem() {
   // Fungsi untuk submit data item
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Data barang:", itemData);
+    // console.log("Data barang:", itemData);
     // Clear form setelah submit
     setItemData({
       name: "",

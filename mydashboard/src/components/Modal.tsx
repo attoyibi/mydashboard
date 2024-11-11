@@ -1,8 +1,10 @@
 // src/components/Modal.js
 import React from "react";
-
-const Modal = ({ isOpen, onClose, title, children }) => {
-    if (!isOpen) return null;
+import useItemForm from "../hooks/useItemForm";
+const Modal = ({ isModalOpen, onClose, title, children }) => {
+    // const { isModalOpen } = useItemForm();
+    // console.log("!isModalOpen dalem modal = ", !isModalOpen);
+    if (!isModalOpen) return null;
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
@@ -32,18 +34,8 @@ const Modal = ({ isOpen, onClose, title, children }) => {
                     </button>
                 </div>
 
-                {/* Modal Content */}
                 <div>{children}</div>
 
-                {/* Modal Footer */}
-                {/* <div className="flex justify-end mt-4">
-                    <button
-                        onClick={onClose}
-                        className="mr-2 bg-gray-300 text-gray-800 py-2 px-4 rounded-md hover:bg-gray-400 transition duration-200"
-                    >
-                        Close
-                    </button>
-                </div> */}
             </div>
         </div>
     );
