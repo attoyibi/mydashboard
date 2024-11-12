@@ -27,7 +27,7 @@ A simple web application designed to showcase front-end development skills, allo
 - MySQL database set up
 - Git for version control
 
-### Installation
+### Installation Back End
 
 1. **Clone the Repository**
    ```bash
@@ -101,4 +101,94 @@ A simple web application designed to showcase front-end development skills, allo
 
 6. **Access the Application**
    Open `http://localhost:3000` in your browser. Here, you will find the registration and login form. After logging in, you will be redirected to your dashboard where you can manage your items by adding, editing, or deleting them.
+
+### Installation Front End
+
+```markdown
+# Front-End Setup Guide
+
+This guide will help you set up the front-end of the project, built with React and Vite.
+
+## Prerequisites
+
+Before starting the installation, please ensure the following are installed:
+
+- **Node.js**: Verify installation by running:
+  ```bash
+  node -v
+  ```
+
+- **npm**: Verify installation by running:
+  ```bash
+  npm -v
+  ```
+
+If Node.js or npm are not installed, download and install them from the [official Node.js website](https://nodejs.org/).
+
+## Project Structure
+
+This front-end project is located in the `frontend` directory.
+
+## Installation
+
+1. **Clone the Repository**
+
+   Clone the repository to your local machine and navigate to the `frontend` directory:
+   ```bash
+   git clone https://github.com/your-username/project-name.git
+   cd project-name/frontend
+   ```
+
+2. **Install Dependencies**
+
+   Install all the required dependencies for the front-end using npm:
+   ```bash
+   npm install
+   ```
+
+3. **Start the Development Server**
+
+   Once the dependencies are installed, start the development server using Vite:
+   ```bash
+   npm run dev
+   ```
+
+   The development server will start and be accessible at [http://localhost:5173](http://localhost:5173) by default.
+
+## Available Scripts
+
+In the project directory, you can run the following commands:
+
+- `npm run dev`: Runs the Vite development server in the local environment.
+- `npm run build`: Builds the project for production to the `dist` folder.
+- `npm run preview`: Preview the production build locally.
+
+## Folder Structure
+
+Here is a quick overview of the folder structure:
+
+```plaintext
+frontend/
+├── src/
+│   ├── assets/     # Static assets like images, fonts
+│   ├── components/ # Reusable UI components
+│   ├── pages/      # Different pages in the app (e.g., Login, Dashboard)
+│   ├── services/   # API calls or utility functions
+│   └── App.tsx     # Main application entry point
+├── public/         # Public assets served directly (index.html)
+├── .env            # Environment variables for your app (e.g., API URLs)
+├── package.json    # Project dependencies and scripts
+└── vite.config.ts  # Vite configuration file
+```
+
+## Troubleshooting
+
+If you encounter issues with the development server, try clearing the cache:
+```bash
+npm run clean
+```
+
+Ensure you have the correct Node.js version (recommended: LTS version). If the server doesn’t start, check for errors in the terminal or browser console, and verify that all dependencies are installed.
+
+Once setup is complete, visit [http://localhost:5173](http://localhost:5173) in your browser to see the front-end application running.
 ```
