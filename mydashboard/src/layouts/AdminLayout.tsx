@@ -34,12 +34,12 @@ const AdminLayout = () => {
           <h1 className="text-xl font-bold text-gray-700">Admin Panel</h1>
         </div>
         <nav className="p-4 space-y-2">
-          <Link
+          {/* <Link
             to="/dashboard"
             className="block px-4 py-2 text-gray-700 rounded hover:bg-gray-200"
           >
             Dashboard
-          </Link>
+          </Link> */}
           <Link
             to="/dashboard/add-item"
             className="block px-4 py-2 text-gray-700 rounded hover:bg-gray-200"

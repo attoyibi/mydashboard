@@ -46,7 +46,7 @@ export const useLogin = () => {
                 if (userId) localStorage.setItem('userId', userId.toString());
                 if (email) localStorage.setItem('email', email);
 
-                navigate('/dashboard'); // Replace '/dashboard' with your target path
+                navigate('/dashboard/add-item'); // Replace '/dashboard' with your target path
             }
         } catch (error) {
             setServerError(`An unexpected error occurred: ${error}`);
