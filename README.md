@@ -32,17 +32,17 @@ This application includes the following features:
 2. **Install Dependencies**
 Before you can run the application, you need to install the required dependencies. Ensure that Node.js and npm are installed. You can check this by running:
    
-   ```bash
+   `bash
    Copy code
    node -v
-   npm -v
+   npm -v`
 
    -If you don’t have Node.js installed, you can download it from the Node.js website.
 
    After making sure Node.js and npm are installed, run the following command to install all the necessary dependencies:
-   ```bash
+   `bash
    Copy code
-   npm install
+   npm install`
 
    3. **Set Up Environment Variables**
    You need to configure your MySQL database connection details. In the project’s root directory, create a .env file with the following content:
