@@ -5,7 +5,18 @@ A simple web application designed to showcase front-end development skills, allo
 
 ## Project Features
 
-- **User Interface**: Registration and login forms for users.
+- **Landing Page**: Hero and Feature Section.
+
+  ***dekstop***
+  ![image](https://github.com/user-attachments/assets/cfc309c4-64e3-4607-aaeb-4050c893423a)
+
+  ***table***
+  ![image](https://github.com/user-attachments/assets/22351684-4d4f-4747-b5d8-66da33fcff35)
+
+  ***mobile***
+  ![image](https://github.com/user-attachments/assets/b472432b-5c03-4148-9116-f33f62fb84c6)
+
+- **User Interface**: Registration and login forms for users.  
 - **User Dashboard**: Displays a list of items with options to add or delete items.
 - **Item Management**: Users can add and remove items from their dashboard.
 - **Responsive Design**: Fully responsive, optimized for mobile and desktop views.
