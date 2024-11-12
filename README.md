@@ -1,37 +1,31 @@
-# mydashboard
+# Dashboard Management Application
 
-struktur data
+A simple web application built to showcase front-end development skills, allowing users to manage items through a responsive dashboard interface. This app includes registration, login, and item management features.
 
-item 
-[
-    {
-        "id": 1,
-        "user_id": 1,
-        "name": "Laptop",
-        "description": "Dell XPS 13, 16GB RAM",
-        "quantity": 5,
-        "price": "1299.99",
-        "created_at": "2024-11-10T06:55:04.000Z",
-        "updated_at": "2024-11-10T06:55:04.000Z"
-    },
-    {
-        "id": 2,
-        "user_id": 1,
-        "name": "Mouse",
-        "description": "Logitech Wireless Mouse",
-        "quantity": 20,
-        "price": "25.50",
-        "created_at": "2024-11-10T06:55:04.000Z",
-        "updated_at": "2024-11-10T06:55:04.000Z"
-    },
-    {
-        "id": 8,
-        "user_id": 1,
-        "name": "Example Item",
-        "description": "This is a sample item.",
-        "quantity": 10,
-        "price": "29.99",
-        "created_at": "2024-11-10T10:04:50.000Z",
-        "updated_at": "2024-11-10T10:04:50.000Z"
-    }
-]
+## Project Overview
+This application includes the following features:
+- **User Interface**: Includes registration and login forms for users.
+- **User Dashboard**: Displays a list of items with options to add or delete items.
+- **Item Management**: Users can add and remove items from their dashboard.
+- **Responsive Design**: Fully responsive and optimized for both mobile and desktop views.
+
+## Built With
+- **Frontend**: HTML, CSS, JavaScript, React.js
+- **Styling**: Tailwind CSS 
+- **Database**: MySQL
+- **TypeScript**: Type safety in frontend development and backend development
+- **Bundling**: Vite
+
+## Getting Started
+
+### Prerequisites
+- Node.js and npm installed
+- MySQL database set up
+- Git for version control
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
