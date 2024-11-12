@@ -135,8 +135,8 @@ This front-end project is located in the `frontend` directory.
 
    Clone the repository to your local machine and navigate to the `frontend` directory:
    ```bash
-   git clone https://github.com/your-username/project-name.git
-   cd project-name/frontend
+   git clone https://github.com/attoyibi/mydashboard/tree/documentation
+   cd mydashboard
    ```
 
 2. **Install Dependencies**
@@ -163,23 +163,6 @@ In the project directory, you can run the following commands:
 - `npm run build`: Builds the project for production to the `dist` folder.
 - `npm run preview`: Preview the production build locally.
 
-## Folder Structure
-
-Here is a quick overview of the folder structure:
-
-```plaintext
-frontend/
-├── src/
-│   ├── assets/     # Static assets like images, fonts
-│   ├── components/ # Reusable UI components
-│   ├── pages/      # Different pages in the app (e.g., Login, Dashboard)
-│   ├── services/   # API calls or utility functions
-│   └── App.tsx     # Main application entry point
-├── public/         # Public assets served directly (index.html)
-├── .env            # Environment variables for your app (e.g., API URLs)
-├── package.json    # Project dependencies and scripts
-└── vite.config.ts  # Vite configuration file
-```
 
 ## Troubleshooting
 
@@ -191,4 +174,3 @@ npm run clean
 Ensure you have the correct Node.js version (recommended: LTS version). If the server doesn’t start, check for errors in the terminal or browser console, and verify that all dependencies are installed.
 
 Once setup is complete, visit [http://localhost:5173](http://localhost:5173) in your browser to see the front-end application running.
-```
