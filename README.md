@@ -46,7 +46,7 @@ Before you can run the application, you need to install the required dependencie
 
    3. **Set Up Environment Variables**
    You need to configure your MySQL database connection details. In the project’s root directory, create a .env file with the following content:
-
+   ```bash
    plaintext
    Copy code
    DB_HOST=localhost
@@ -54,7 +54,7 @@ Before you can run the application, you need to install the required dependencie
    DB_PASSWORD=root
    DB_NAME=dashboard
    DB_PORT=3306
-   4. Set Up the Database
+   4. **Set Up the Database**
    Make sure MySQL is installed and running on your system. You can download MySQL from the official website.
 
    Once MySQL is running, you will need to create the required database and tables.
