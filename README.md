@@ -1,4 +1,3 @@
-```markdown
 # Dashboard Management Application
 
 ## Overview
@@ -104,7 +103,6 @@ A simple web application designed to showcase front-end development skills, allo
 
 ### Installation Front End
 
-```markdown
 # Front-End Setup Guide
 
 This guide will help you set up the front-end of the project, built with React and Vite.
