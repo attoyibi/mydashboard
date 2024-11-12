@@ -151,7 +151,7 @@ const Login: React.FC = () => {
                 {errors.password && <p className="text-xs text-red-600 mt-2">{errors.password}</p>}
               </div>
 
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <input
                   type="checkbox"
                   id="remember"
@@ -160,10 +160,10 @@ const Login: React.FC = () => {
                   checked={rememberMe}
                   onChange={handleRememberMeChange}
                 />
-                {/* <label htmlFor="remember" className="ml-2 text-sm text-gray-600 dark:text-neutral-400">
+                <label htmlFor="remember" className="ml-2 text-sm text-gray-600 dark:text-neutral-400">
                   Remember me
-                </label> */}
-              </div>
+                </label>
+              </div> */}
 
               {serverError && <p className="text-xs text-red-600 mt-2">{serverError}</p>}
 

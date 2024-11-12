@@ -93,23 +93,30 @@ const VisitorTable: React.FC<VisitorTableProps> = ({ items, onCreateClick, onDel
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-neutral-700">
-                  {items.map((item, index) => (
-                    <tr key={index}>
-                      <td className="px-6 py-4 text-gray-800 dark:text-neutral-200">{item.name}</td>
-                      <td className="px-6 py-4 text-gray-800 dark:text-neutral-200">{item.description}</td>
-                      <td className="px-6 py-4 text-gray-800 dark:text-neutral-200">{item.quantity}</td>
-                      <td className="px-6 py-4 text-gray-800 dark:text-neutral-200">${item.price}</td>
-                      <td className="px-6 py-4">
-                        {/* <button className="text-blue-600 hover:underline dark:text-blue-400">Edit</button> */}
-                        <button
-                          onClick={() => openModal(item)} // Open modal to confirm deletion
-                          className="ml-4 text-red-600 hover:underline dark:text-red-400"
-                        >
-                          Delete
-                        </button>
+                  {isLoading ? (
+                    <tr>
+                      <td colSpan="5" className="px-6 py-4 text-center text-gray-800 dark:text-neutral-200">
+                        Fetching data...
                       </td>
                     </tr>
-                  ))}
+                  ) : (
+                    items.map((item, index) => (
+                      <tr key={index}>
+                        <td className="px-6 py-4 text-gray-800 dark:text-neutral-200">{item.name}</td>
+                        <td className="px-6 py-4 text-gray-800 dark:text-neutral-200">{item.description}</td>
+                        <td className="px-6 py-4 text-gray-800 dark:text-neutral-200">{item.quantity}</td>
+                        <td className="px-6 py-4 text-gray-800 dark:text-neutral-200">${item.price}</td>
+                        <td className="px-6 py-4">
+                          <button
+                            onClick={() => openModal(item)}
+                            className="ml-4 text-red-600 hover:underline dark:text-red-400"
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))
+                  )}
                 </tbody>
               </table>
               {/* End Table */}
