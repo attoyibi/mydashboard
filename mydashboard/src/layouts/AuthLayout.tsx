@@ -7,7 +7,7 @@ const AuthLayout = () => {
             {/* Sidebar with 7/12 of the page width on large screens, hidden on medium and small screens */}
             <div className="hidden md:flex md:w-7/12 h-full bg-gray-100">
                 <img
-                    src="https://via.placeholder.com/800x600" // Dummy image
+                    src="/login.jpeg" // Dummy image
                     alt="Sidebar Dummy"
                     className="h-full w-full object-cover"
                 />

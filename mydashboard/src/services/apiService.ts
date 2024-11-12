@@ -5,7 +5,7 @@ import { RegisterResponse } from '../types/authTypes'; // Import new RegisterRes
 
 export const loginUser = async (email: string, password: string): Promise<LoginResponse> => {
     const response = await api.post<LoginResponse>('/auth/login', { email, password });
-    // console.log("response = ", response);
+    console.log("response login user= ", response);
     return response.data;
 };
 // Register user

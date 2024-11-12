@@ -8,6 +8,7 @@ type User = {
     id: number;
     email: string;
     password: string;
+    username: string
     // Add other user fields if any
 };
 
@@ -57,7 +58,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
         }
 
         // Generate a JWT token
-        const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, { expiresIn: '1h' });
+        const token = jwt.sign({ id: user.id, email: user.email, username: user.username }, JWT_SECRET, { expiresIn: '1h' });
 
         // Respond with the token
         res.status(200).json({
@@ -68,6 +69,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
                 userId: user.id,
                 email: user.email,
                 token: token,
+                username: user.username,
                 expiresIn: '1 hour'
             },
             error: null

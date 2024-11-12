@@ -1,24 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
+    <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center mt-[50px]">
       {/* Grid */}
       <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
         <div>
           <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight">
-            Start your journey with{" "}
-            <span className="text-blue-600">Preline</span>
+            Kelola Inventaris Anda dengan Mudah
+            <span className="text-blue-600"> MyDashboard</span>
           </h1>
           <p className="mt-3 text-lg text-gray-800">
-            Hand-picked professionals and expertly crafted components, designed
-            for any kind of entrepreneur.
+            Sistem Manajemen Inventaris yang Efisien dan Terpercaya
           </p>
 
           {/* Buttons */}
           <div className="mt-7 grid gap-3 w-full sm:inline-flex">
-            <a
-              href="#"
+            <Link
+              to="/login"
               className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
             >
               Get started
@@ -36,13 +36,13 @@ const HeroSection = () => {
               >
                 <path d="m9 18 6-6-6-6" />
               </svg>
-            </a>
-            <a
+            </Link>
+            {/* <a
               href="#"
               className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
             >
               Contact sales team
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
         <div className=" w-full h-96 md:h-full bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center">
           <img
             className="w-full h-full object-cover rounded-lg"
-            src="https://images.unsplash.com/photo-1648737963503-1a26da876aca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=900&q=80"
+            src="/hero.jpeg"
             alt="Hero Section"
           />
         </div>
