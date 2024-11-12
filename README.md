@@ -103,11 +103,7 @@ A simple web application designed to showcase front-end development skills, allo
 
 ### Installation Front End
 
-# Front-End Setup Guide
-
-This guide will help you set up the front-end of the project, built with React and Vite.
-
-## Prerequisites
+### Prerequisites
 
 Before starting the installation, please ensure the following are installed:
 
@@ -123,11 +119,11 @@ Before starting the installation, please ensure the following are installed:
 
 If Node.js or npm are not installed, download and install them from the [official Node.js website](https://nodejs.org/).
 
-## Project Structure
+### Project Structure
 
 This front-end project is located in the `frontend` directory.
 
-## Installation
+### Installation
 
 1. **Clone the Repository**
 
@@ -153,7 +149,7 @@ This front-end project is located in the `frontend` directory.
 
    The development server will start and be accessible at [http://localhost:5173](http://localhost:5173) by default.
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run the following commands:
 
@@ -162,7 +158,7 @@ In the project directory, you can run the following commands:
 - `npm run preview`: Preview the production build locally.
 
 
-## Troubleshooting
+### Troubleshooting
 
 If you encounter issues with the development server, try clearing the cache:
 ```bash
