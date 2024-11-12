@@ -28,13 +28,13 @@ This application includes the following features:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/attoyibi/mydashboard.git
-   cd mydashboard```
+   cd mydashboard
 2. **Install Dependencies**
 Before you can run the application, you need to install the required dependencies. Ensure that Node.js and npm are installed. You can check this by running:
-   `bash
+   ```bash
    Copy code
    node -v
-   npm -v````
+   npm -v```
 
 If you don’t have Node.js installed, you can download it from the Node.js website.
 
