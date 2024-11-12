@@ -41,10 +41,12 @@ export const useLogin = () => {
                     setServerError(response.error.message || 'An error occurred');
                 }
             } else if (response.status === 'success') {
-                const { token, userId, email } = response.data;
+                const { token, userId, email, username } = response.data;
+                console.log("response.data = ", response.data);
                 if (token) localStorage.setItem('token', token);
                 if (userId) localStorage.setItem('userId', userId.toString());
                 if (email) localStorage.setItem('email', email);
+                if (username) localStorage.setItem('username', username);
 
                 navigate('/dashboard/add-item'); // Replace '/dashboard' with your target path
             }

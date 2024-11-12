@@ -5,6 +5,7 @@ import { useLogout } from '../hooks/useLogout';
 const AdminLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [username, setUsername] = useState("");
   const dropdownRef = useRef(null); // referensi untuk dropdown
   const { logout } = useLogout();
 
@@ -18,11 +19,12 @@ const AdminLayout = () => {
 
     // Menambahkan event listener
     document.addEventListener("mousedown", handleClickOutside);
+    setUsername(localStorage.getItem("username") || "Default Name"); // Default ke "John Doe" jika tidak ada di localStorage
 
     // Membersihkan event listener saat komponen di-unmount
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
+  // Ambil username dari localStorage
   return (
     <div className="flex h-screen bg-gray-100 relative">
       {/* Sidebar */}
@@ -128,7 +130,7 @@ const AdminLayout = () => {
 
             <div className="relative flex items-center space-x-2">
               <img
-                src="https://via.placeholder.com/32"
+                src="/user_default.jpg"
                 alt="User Avatar"
                 className="w-8 h-8 rounded-full cursor-pointer"
                 onClick={
@@ -146,7 +148,7 @@ const AdminLayout = () => {
                   className="absolute right-0 mt-[180px] w-40 bg-white rounded-lg shadow-lg py-2 z-10"
                 >
                   <span className="block px-4 py-2 text-gray-700 font-medium">
-                    John Doe
+                    {username}
                   </span>
                   <button onClick={logout} className="block w-full text-left px-4 py-2 text-sm text-red-500 hover:bg-gray-100">
                     Logout

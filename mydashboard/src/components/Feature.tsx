@@ -10,7 +10,7 @@ const Features = () => {
                 <div className="order-2 md:order-1">
                     <img
                         className="rounded-xl w-full"
-                        src="https://images.unsplash.com/photo-1648737963503-1a26da876aca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=900&q=80"
+                        src="/feature.jpeg"
                         alt="Features Image"
                     />
                 </div>
@@ -21,19 +21,19 @@ const Features = () => {
                         {/* Title */}
                         <div className="space-y-2 md:space-y-4">
                             <h2 className="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-neutral-200">
-                                We tackle the challenges start-ups face
+                                Kelola Inventaris Anda dengan Mudah dan Efisien
                             </h2>
                             <p className="text-gray-500 dark:text-neutral-500">
-                                Besides working with start-up enterprises as a partner for digitalization, we have built enterprise products for common pain points that we have encountered in various products and projects.
+                                Dashboard Pengelolaan Item yang Menyederhanakan Proses Anda
                             </p>
                         </div>
 
                         {/* Features List */}
                         <ul className="space-y-2 sm:space-y-4">
                             {[
-                                { title: "Easy & fast designing", description: "Easy & fast" },
-                                { title: "Powerful features", description: "Powerful" },
-                                { title: "User Experience Design", description: "User Experience Design" },
+                                { title: "Pengelolaan Stok Real-time", description: "Lihat dan kelola stok item Anda secara langsung dan akurat." },
+                                { title: "Pembaruan Mudah", description: "Tambahkah dan hapus item dengan cepat tanpa kerumitan." },
+                                { title: "Laporan dan Analisis", description: "Dapatkan wawasan mendalam tentang performa inventaris untuk pengambilan keputusan yang lebih baik." },
                             ].map((feature, index) => (
                                 <li key={index} className="flex gap-x-3">
                                     <span className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">

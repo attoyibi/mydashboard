@@ -7,6 +7,7 @@ export interface LoginResponse {
         token?: string;
         userId?: number;
         email?: string;
+        username?: string;
     };
     error: {
         field?: string;
