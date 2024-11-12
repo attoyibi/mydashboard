@@ -26,7 +26,7 @@ A simple web application designed to showcase front-end development skills, allo
 - MySQL database set up
 - Git for version control
 
-### Installation Back End
+## Installation Back End
 
 1. **Clone the Repository**
    ```bash
@@ -101,7 +101,7 @@ A simple web application designed to showcase front-end development skills, allo
 6. **Access the Application**
    Open `http://localhost:3000` in your browser. Here, you will find the registration and login form. After logging in, you will be redirected to your dashboard where you can manage your items by adding, editing, or deleting them.
 
-### Installation Front End
+## Installation Front End
 
 ### Prerequisites
 
@@ -121,7 +121,7 @@ If Node.js or npm are not installed, download and install them from the [officia
 
 ### Project Structure
 
-This front-end project is located in the `frontend` directory.
+This front-end project is located in the `mydashboard` directory.
 
 ### Installation
 
