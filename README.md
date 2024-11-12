@@ -36,66 +36,66 @@ Before you can run the application, you need to install the required dependencie
    node -v
    npm -v
 
-   If you don’t have Node.js installed, you can download it from the Node.js website.
+   -If you don’t have Node.js installed, you can download it from the Node.js website.
 
    After making sure Node.js and npm are installed, run the following command to install all the necessary dependencies:
-
    ```bash
    Copy code
    npm install
-3. **Set Up Environment Variables**
-You need to configure your MySQL database connection details. In the project’s root directory, create a .env file with the following content:
 
-plaintext
-Copy code
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=root
-DB_NAME=dashboard
-DB_PORT=3306
-4. Set Up the Database
-Make sure MySQL is installed and running on your system. You can download MySQL from the official website.
+   3. **Set Up Environment Variables**
+   You need to configure your MySQL database connection details. In the project’s root directory, create a .env file with the following content:
 
-Once MySQL is running, you will need to create the required database and tables.
+   plaintext
+   Copy code
+   DB_HOST=localhost
+   DB_USER=root
+   DB_PASSWORD=root
+   DB_NAME=dashboard
+   DB_PORT=3306
+   4. Set Up the Database
+   Make sure MySQL is installed and running on your system. You can download MySQL from the official website.
 
-Open MySQL Workbench or your preferred MySQL client and execute the SQL commands from the server/db folder. The folder contains SQL scripts to set up the user and item tables:
-Navigate to the server/db folder.
-Run the SQL file to create the tables.
-Here is the SQL structure that will be used:
+   Once MySQL is running, you will need to create the required database and tables.
 
-sql
-Copy code
-CREATE TABLE user (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+   Open MySQL Workbench or your preferred MySQL client and execute the SQL commands from the server/db folder. The folder contains SQL scripts to set up the user and item tables:
+   Navigate to the server/db folder.
+   Run the SQL file to create the tables.
+   Here is the SQL structure that will be used:
 
-CREATE TABLE item (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    name VARCHAR(100) NOT NULL,
-    description TEXT,
-    quantity INT DEFAULT 0,
-    price DECIMAL(10, 2) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE
-);
-5. Start the Development Server
-Now that the dependencies are installed and the database is set up, you can start the server.
+   sql
+   Copy code
+   CREATE TABLE user (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      username VARCHAR(50) NOT NULL,
+      email VARCHAR(100) NOT NULL UNIQUE,
+      password VARCHAR(255) NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+   );
 
-Run this command to launch the development server:
+   CREATE TABLE item (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      user_id INT NOT NULL,
+      name VARCHAR(100) NOT NULL,
+      description TEXT,
+      quantity INT DEFAULT 0,
+      price DECIMAL(10, 2) NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+      FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE
+   );
+   5. Start the Development Server
+   Now that the dependencies are installed and the database is set up, you can start the server.
 
-bash
-Copy code
-npm start
-This will start the application on http://localhost:3000. You can visit this URL in your browser to access the web application.
+   Run this command to launch the development server:
 
-6. Access the Application
-Visit http://localhost:3000 in your browser.
-You will see a registration and login form. After logging in, you’ll be redirected to your dashboard.
-On the dashboard, you can manage your items by adding, editing, or deleting them.
+   bash
+   Copy code
+   npm start
+   This will start the application on http://localhost:3000. You can visit this URL in your browser to access the web application.
+
+   6. Access the Application
+   Visit http://localhost:3000 in your browser.
+   You will see a registration and login form. After logging in, you’ll be redirected to your dashboard.
+   On the dashboard, you can manage your items by adding, editing, or deleting them.
