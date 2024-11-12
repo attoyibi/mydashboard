@@ -31,6 +31,7 @@ This application includes the following features:
    cd mydashboard
 2. **Install Dependencies**
 Before you can run the application, you need to install the required dependencies. Ensure that Node.js and npm are installed. You can check this by running:
+   
    ```bash
    Copy code
    node -v
