@@ -16,10 +16,19 @@ A simple web application designed to showcase front-end development skills, allo
   ***mobile***
   ![image](https://github.com/user-attachments/assets/b472432b-5c03-4148-9116-f33f62fb84c6)
 
-- **User Interface**: Registration and login forms for users.  
+- **User Interface**: Registration and login forms for users.
+  - ![image](https://github.com/user-attachments/assets/c161729f-464f-4a23-a692-d6c9dd152291)
+  
 - **User Dashboard**: Displays a list of items with options to add or delete items.
+  - ![image](https://github.com/user-attachments/assets/015a84d4-9bc2-4289-bd39-1e221a8a7f31)
+
 - **Item Management**: Users can add and remove items from their dashboard.
+  - ![image](https://github.com/user-attachments/assets/c1a7e8bf-fb9f-4ea8-92e1-2e573dc57f65)
+  - ![image](https://github.com/user-attachments/assets/47af3a45-2bc2-4b1f-b4ba-9f0c5fde4133)
+
 - **Responsive Design**: Fully responsive, optimized for mobile and desktop views.
+  - ![image](https://github.com/user-attachments/assets/30f211c3-b61e-4503-bf06-574fec744e71)
+  - ![image](https://github.com/user-attachments/assets/4419e8a7-e063-4797-8ca6-7962f77c04cc)
 
 ## Built With
 
